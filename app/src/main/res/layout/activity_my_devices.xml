@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/upper"
+        android:id="@+id/up"
+        android:scaleType="fitXY"
+        android:layout_height="90dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/logo"
+        android:layout_below="@id/up"
+        android:id="@+id/log"
+        android:layout_marginBottom="20dp"
+        android:layout_height="100dp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:id="@+id/footer"
+        android:layout_alignParentBottom="true"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+        <Arabs.ArabButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"
+            android:id="@+id/go_add"
+            android:enabled="true"
+
+            android:layout_gravity="center"
+            android:layout_margin="2dp"
+            android:background="@drawable/bg_btn_blue"
+            android:textColor="#ffffff"
+            android:text=" جهاز جديد"
+
+            />
+        <Arabs.ArabButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_weight="1"
+            android:id="@+id/go_profile"
+            android:layout_gravity="center"
+            android:enabled="true"
+            android:layout_margin="2dp"
+            android:background="@drawable/bg_btn_blue"
+            android:textColor="#ffffff"
+            android:text=" بروفايلي"
+
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/log"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+
+        android:layout_margin="10dp"
+
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+         android:weightSum="1"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_weight="0.7"
+                android:text="بحث"
+                android:id="@+id/go_search"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:id="@+id/search_input"
+                android:layout_weight="0.3"
+                android:hint="اسم الجهاز ؟"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+    android:layout_width="match_parent"
+    android:layout_margin="10dp"
+    android:id="@+id/list"
+    android:nestedScrollingEnabled="false"
+    android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/loading"
+            android:layout_height="wrap_content">
+
+            <Arabs.ArabTextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:text="يرجى الانتظار"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+            <Arabs.ArabTextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="جاري جلب الاجهزة التي تخصني"
+                android:layout_height="wrap_content" />
+<ProgressBar
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+
+    android:layout_margin="10dp"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:id="@+id/no_items"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+            <Arabs.ArabTextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:text="لا يوجد اجهزة بعد"
+                android:textStyle="bold"
+                android:layout_height="wrap_content" />
+            <Arabs.ArabTextView
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:text="قم بشراء جهاز جديد لتتمكن من تعقبه هنا"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

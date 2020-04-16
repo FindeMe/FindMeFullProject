@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "900711833130",
+    "firebase_url": "https://univ-homeworks.firebaseio.com",
+    "project_id": "univ-homeworks",
+    "storage_bucket": "univ-homeworks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:900711833130:android:a0cfde965a1d8a30992d53",
+        "android_client_info": {
+          "package_name": "com.nyx.fineme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "900711833130-rflohj18i26m45skfcb0q0for3ot9jkb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZ5XF1vu_4gBOxG6BJwCxIHdkVC7evSbg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "900711833130-rflohj18i26m45skfcb0q0for3ot9jkb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

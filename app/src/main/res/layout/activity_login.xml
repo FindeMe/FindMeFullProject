@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#fff"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/upper"
+        android:id="@+id/up"
+        android:scaleType="fitXY"
+        android:layout_height="90dp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/logo"
+        android:layout_below="@id/up"
+        android:layout_marginBottom="20dp"
+        android:layout_height="100dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+
+        android:layout_height="wrap_content">
+
+       <ImageButton
+           android:layout_width="30dp"
+           android:src="@drawable/close"
+           android:layout_gravity="center"
+           android:id="@+id/go_close"
+           android:layout_margin="30dp"
+           android:layout_height="30dp" />
+
+        <Arabs.ArabEditText
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_border"
+            android:hint="البريد الالكتروني"
+            android:padding="10dp"
+            android:id="@+id/email"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content" />
+        <Arabs.ArabEditText
+            android:layout_width="match_parent"
+            android:background="@drawable/bg_border"
+            android:hint="كلمة المرور"
+            android:id="@+id/password"
+            android:padding="10dp"
+            android:gravity="right"
+            android:inputType="textPassword"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content" />
+
+
+
+            <Arabs.ArabButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_weight="1"
+                android:id="@+id/go_login"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:background="@drawable/bg_btn_blue"
+                android:textColor="#ffffff"
+                android:text="تسجيل الدخول"
+
+                />
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/loading"
+            android:visibility="invisible"
+            android:layout_margin="10dp"
+
+            />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
